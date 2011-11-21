@@ -1,7 +1,7 @@
 <?php
 	class Calc{
-		private $a;
-		private $b;
+		protected $a;
+		protected $b;
 		public function __construct($x,$y){
 			$this->a=$x;
 			$this->b=$y;}
@@ -15,13 +15,14 @@
 			return $this->a/$this->b;}
 		}
 	$c=new Calc(3,4);
-	echo $c->add();echo $c->mul();
+		echo $c->add();
+		echo $c->mul();
 	class Caladv extends Calc{
 		private $m;
 		public function __construct($p){
 			$this->m=$p;}
-		parent::__construct($x,$y);
 		public function _pow(){
+			parent::__construct($x,$y);
 			return pow($this->a,$this->b);}
 		public function _sqrt(){
 			return sqrt($this->m);}
@@ -30,3 +31,6 @@
 		}
 	$d=new Caladv(25);
 	echo $d->_sqrt();
+	$d=new Caladv(2,4);
+	echo $d->_pow();
+	
