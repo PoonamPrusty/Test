@@ -18,19 +18,20 @@
 		echo $c->add();
 		echo $c->mul();
 	class Caladv extends Calc{
-		private $m;
-		public function __construct($p){
-			$this->m=$p;}
+		
+		public function __construct($a,$b=2){
+			$this->a=$a;
+			$this->b=$b;}
 		public function _pow(){
-			parent::__construct($x,$y);
+			parent::__construct($this->a,$b=2);
 			return pow($this->a,$this->b);}
 		public function _sqrt(){
-			return sqrt($this->m);}
+			return sqrt($this->a);}
 		public function _exp(){
-			return exp($this->m);}
+			return exp($this->a);}
 		}
 	$d=new Caladv(25);
 	echo $d->_sqrt();
-	$d=new Caladv(2,4);
+	$d=new Caladv(2,3);
 	echo $d->_pow();
 	
