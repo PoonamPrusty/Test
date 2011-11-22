@@ -18,12 +18,9 @@
 		echo $c->add();
 		echo $c->mul();
 	class Caladv extends Calc{
-		
 		public function __construct($a,$b=2){
-			$this->a=$a;
-			$this->b=$b;}
+			parent::__construct($a,$b);}
 		public function _pow(){
-			parent::__construct($this->a,$b=2);
 			return pow($this->a,$this->b);}
 		public function _sqrt(){
 			return sqrt($this->a);}
